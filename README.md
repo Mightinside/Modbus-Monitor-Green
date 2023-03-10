@@ -1,3 +1,3 @@
 # Modbus-Monitor-Green
-The application is a kinda RS485 data squisition software
+The application is a kinda RS485 data scquisition software
 Alias is Modbus Terminal
