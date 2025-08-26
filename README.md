@@ -59,7 +59,7 @@ WiFi settings for Modbus (or any other) device
 Bluetooth session settings   
 ![App Session Bluetooth](/app-sess-bt.png?raw=true)    
 
-Application running widgets   
+ATeL script for running widgets that display measurement data   
 ![App Widgets](/app-script-widget-basic.png?raw=true)    
 
 Device properties   
