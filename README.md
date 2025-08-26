@@ -48,7 +48,7 @@ Tested with the following devices:
 
    Screenshots
 
-![Application](/app.png)   
+![Application](/app.png =400x300)   
 ![App help](/app-help.png)   
 ![App WiFi](/app-wifi.png)   
 ![App Session Bluetooth](/app-sess-bt.png)    
