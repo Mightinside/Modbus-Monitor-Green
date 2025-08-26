@@ -35,14 +35,14 @@ In particular, towards to Modbus families protocol the application allows:
 More details you can find in other specific topics.
 
 Tested with the following devices:
-ESP8266, ESP-01S: WiFi switch
-ELM327 OBDII USB scanner
-ELM327 OBD II Bluetooth scanner
-ELM327 OBD II WIFI scanner
-PZEM-004, PZEM-017 Voltmetter Current Meter, Energy Meter
-USB-TTL CP2102 USB to TTL UART module
-USB-TTL PL2303 USB to TTL UART module
-TTL To RS485 Module Hardware Automatic Flow Control Module Serial UART Level Mutual Conversion Power Supply Module 3.3V 5V
+1. ESP8266, ESP-01S: WiFi switch
+2. ELM327 OBDII USB scanner
+3. ELM327 OBD II Bluetooth scanner
+4. ELM327 OBD II WIFI scanner
+5. PZEM-004, PZEM-017 Voltmetter Current Meter, Energy Meter
+6. USB-TTL CP2102 USB to TTL UART module
+7. USB-TTL PL2303 USB to TTL UART module
+8. TTL To RS485 Module Hardware Automatic Flow Control Module Serial UART Level Mutual Conversion Power Supply Module 3.3V 5V
 ...Many others
 
 
