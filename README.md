@@ -1,6 +1,6 @@
 # Modbus-Monitor-Green
 The Modbus Monitor Green Studio is a kinda   
-Modbus/RS485 data scquisition software over ethernet, wifi, serial port, bluetooth   
+Modbus/RS485 data scquisition software over Ethernet TCP, WiFi, Serial Port, Bluetooth   
 Auto Terminal Language ATeL   
 Alias is Modbus Terminal, Auto Terminal, SCADA   
 
@@ -39,7 +39,7 @@ Tested with the following devices:
 1. ESP8266, ESP-01S: WiFi switch
 2. ELM327 OBDII USB scanner
 3. ELM327 OBD II Bluetooth scanner
-4. ELM327 OBD II WIFI scanner
+4. ELM327 OBD II WIFI scanner TCP
 5. PZEM-004, PZEM-017 Voltmetter Current Meter, Energy Meter
 6. USB-TTL CP2102 USB to TTL UART module
 7. USB-TTL PL2303 USB to TTL UART module
