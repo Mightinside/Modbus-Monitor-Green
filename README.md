@@ -46,6 +46,14 @@ Tested with the following devices:
 8. TTL To RS485 Module Hardware Automatic Flow Control Module Serial UART Level Mutual Conversion Power Supply Module 3.3V 5V   
 ...Many others
 
-![Device Properties](/app-device.png?raw=true "Device Properties")
+   Screenshots
+
+![Application](/app.png)   
+![App help](/app-help.png)   
+![App WiFi](/app-wifi.png)   
+![App Session Bluetooth](/app-sess-bt.png)    
+![App Widgets](/app-script-widget-basic.png)    
+
+![Device Properties](/app-device.png?raw=true "Device Properties")   
 
 
