@@ -48,11 +48,21 @@ Tested with the following devices:
 
    Screenshots
 
+The Application Start Page   
 ![Application](/app.png?raw=true "App")   
+Help Topics   
 ![App help](/app-help.png?raw=true)   
+
+WiFi settings for Modbus (or any other) device   
 ![App WiFi](/app-wifi.png?raw=true)   
+   
+Bluetooth session settings   
 ![App Session Bluetooth](/app-sess-bt.png?raw=true)    
+
+Application running widgets   
 ![App Widgets](/app-script-widget-basic.png?raw=true)    
+
+Device properties   
 ![Device Properties](/app-device.png?raw=true "Device Properties")   
 
 
