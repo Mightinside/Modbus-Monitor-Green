@@ -1,0 +1,35 @@
+# AT Terminal OBD ATeL Script. All Rights received.  
+# Verkovich Vasil, DataLexer, 2023
+# Allows to write 3 commands into WIFI AT OBD device and display the result
+# ATZ, ATI, ATDP
+
+#set trace_all 0
+set mmg_write_crc 0
+
+set n 1
+set vin []
+set vout []
+set bval 0
+net_open d1, "192.168.0.10", 35000
+
+set vatz [41 54 5A 0D]
+write d1, 2000, vatz
+readln d1, 2000, 3, vin
+bin2str s, vin, true
+print("got: ", s)
+
+if bval eq 0
+set vati [41 54 49 0D]
+write d1, 2000, vati
+readln d1, 2000, 4, vin
+bin2str s, vin, true
+print("got: ", s)
+endif
+
+set vatdp [41 54 44 50  0D]
+write d1, 2000, vatdp
+readln d1, 2000, 3, vin
+bin2str s, vin, true
+print("got: ", s)
+
+close d1
