@@ -48,12 +48,11 @@ Tested with the following devices:
 
    Screenshots
 
-![Application](/app.png|width=400)   
-![App help](/app-help.png)   
-![App WiFi](/app-wifi.png)   
-![App Session Bluetooth](/app-sess-bt.png)    
-![App Widgets](/app-script-widget-basic.png)    
-
+![Application](/app.png?raw=true "App")   
+![App help](/app-help.png?raw=true)   
+![App WiFi](/app-wifi.png?raw=true)   
+![App Session Bluetooth](/app-sess-bt.png?raw=true)    
+![App Widgets](/app-script-widget-basic.png?raw=true)    
 ![Device Properties](/app-device.png?raw=true "Device Properties")   
 
 
