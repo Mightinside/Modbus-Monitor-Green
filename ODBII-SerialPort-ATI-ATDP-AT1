@@ -1,0 +1,51 @@
+# AT Terminal OBD ATeL Script. All Rights received.
+# Verkovich Vasil, DataLexer, 2023
+# Allows to write the following commands into Serial AT OBD device and displays the result
+# ATI, ATDP, AT1, AT2, ATRV
+
+set mmg_write_crc 0
+set trace_all 0
+set vati [41 54 49 0D]
+set vatdp [41 54 44 50  0D]
+set vat1 [41 54 40 31  0D]
+set vat2 [41 54 40 32  0D]
+set vatrv [41 54 52 56  0D]
+
+set bv 1
+
+serport_open p, "rw", "COM5"
+
+if bv eq 1
+write p, 1000, vati
+readln p, 2000, 3, vo
+
+#vec2str s, vo
+#print("vo: ", vo)
+bin2str s, vo, false
+print("s: ", s)
+
+write p, 1000, vatdp
+readln p, 2000, 7, vo
+bin2str s, vo, false
+print("s: ", s)
+endif
+
+write p, 1000, vat1
+readln p, 2000, 3, vo
+bin2str s, vo, false
+print("s: ", s)
+
+write p, 1000, vat2
+readln p, 2000, 3, vo
+bin2str s, vo, false
+print("s: ", s)
+
+
+write p, 1000, vatrv
+readln p, 2000, 3, vo
+bin2str s, vo, false
+print("s: ", s)
+
+
+close p
+
