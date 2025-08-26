@@ -1,8 +1,8 @@
 # Modbus-Monitor-Green
-The Modbus Monitor Green Studio is a kinda 
-Modbus/RS485 data scquisition software over ethernet, wifi, serial port, bluetooth.
-Auto Terminal Language ATeL.
-Alias is Modbus Terminal, Auto Terminal, SCADA.
+The Modbus Monitor Green Studio is a kinda   
+Modbus/RS485 data scquisition software over ethernet, wifi, serial port, bluetooth   
+Auto Terminal Language ATeL   
+Alias is Modbus Terminal, Auto Terminal, SCADA   
 
 Allows:
 1.	High-Level supervision of machines and hardware with programmable logic.
@@ -18,7 +18,8 @@ Allows:
 
 The story
 
-Initially the program was developed for communicating with Modbus and OBD II proprietary hardware. Eventually it became SCADA like system with possibility of running programmable logic for controling different hardware and make data measurement graphics.
+Initially the program was developed for communicating with Modbus and OBD II proprietary hardware. Eventually it became   
+SCADA like system with possibility of running programmable logic for controling different hardware and make data measurement graphics.
 
 In particular, towards to Modbus families protocol the application allows:
 
@@ -42,7 +43,9 @@ Tested with the following devices:
 5. PZEM-004, PZEM-017 Voltmetter Current Meter, Energy Meter
 6. USB-TTL CP2102 USB to TTL UART module
 7. USB-TTL PL2303 USB to TTL UART module
-8. TTL To RS485 Module Hardware Automatic Flow Control Module Serial UART Level Mutual Conversion Power Supply Module 3.3V 5V
+8. TTL To RS485 Module Hardware Automatic Flow Control Module Serial UART Level Mutual Conversion Power Supply Module 3.3V 5V   
 ...Many others
+
+![Device Properties](/Mightinside/Modbus-Monitor-Green/Blob/Main/app-device.png?raw=true "Device Properties")
 
 
