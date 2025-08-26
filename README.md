@@ -49,6 +49,10 @@ Tested with the following devices:
 
    Screenshots
 
+Measurement and data flow process   
+![5 Widgets](mmg-studio-5-widgets-measr.png?raw=true "Measurement process")   
+   
+   
 The Application Start Page   
 ![Application](/app.png?raw=true "App")   
 Help Topics   
