@@ -46,6 +46,6 @@ Tested with the following devices:
 8. TTL To RS485 Module Hardware Automatic Flow Control Module Serial UART Level Mutual Conversion Power Supply Module 3.3V 5V   
 ...Many others
 
-![Device Properties](/Mightinside/Modbus-Monitor-Green/Blob/Main/app-device.png?raw=true "Device Properties")
+![Device Properties](/app-device.png?raw=true "Device Properties")
 
 
