@@ -3,6 +3,7 @@ The Modbus Monitor Green Studio is a kinda
 Modbus/RS485 data scquisition software over Ethernet TCP, WiFi, Serial Port, Bluetooth   
 Auto Terminal Language ATeL   
 Alias is Modbus Terminal, Auto Terminal, SCADA   
+This proram helps you to focus on a business logic and strategy and do not learn python/C++/C# and tricky termianl commands.   
 
 Allows:
 1.	High-Level supervision of machines and hardware with programmable logic.
