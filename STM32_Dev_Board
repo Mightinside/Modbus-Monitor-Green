@@ -1,6 +1,7 @@
 # AT Terminal OBD ATeL Script. All Rights received.
 # Verkovich Vasil, DataLexer.com, 2023
 # Checks if STM32 development board presents and is in bootloader state
+# Basic behavior of STM32 UART1 programmer
 
 set mmg_write_crc 0
 set trace_all 0
