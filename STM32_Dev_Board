@@ -1,0 +1,58 @@
+# AT Terminal OBD ATeL Script. All Rights received.
+# Verkovich Vasil, DataLexer.com, 2023
+# Checks if STM32 development board presents and is in bootloader state
+
+set mmg_write_crc 0
+set trace_all 0
+set trace_read 0
+#set trace_write 1
+set mmg_send_every_sec 0
+
+set ack_ok 121
+set ack_err 31
+
+
+set v [7F]
+set v_getid [02 FD]
+set bv 1
+
+serport_open p, "rw", "COM11"
+
+write p, 1000, v
+read p, 2000, 1, vo
+vecgs vsz, vo
+if vsz ne 1
+  print("Cannot find out the chip")
+  quit
+endif
+
+print("Chip found: v [", v, "] -> vo: ", vo)
+vecget x, vo, 0
+if x eq ack_err
+  print("Chip is not ready for communication: ", x, ", vo: ", vo)
+#  quit
+endif
+
+write p, 1000, v_getid
+read p, 1000, 5, vo
+vecgs vsz, vo
+if vsz eq 0
+  print("Cannot get chip id: no reply")
+  quit
+endif
+
+vecget x, vo, 0
+if x eq ack_err
+  print("Error reply: ", x, ", vo: ", vo)
+  quit
+else if x ne ack_ok
+  print("Bad reply: ", x, ", vo: ", vo)
+  quit
+endif
+
+print("got reply vo: ", vo)
+
+close p
+
+
+
