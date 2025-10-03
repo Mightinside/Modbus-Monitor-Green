@@ -1,0 +1,115 @@
+# AT Terminal ATeL Script. All Rights received.
+# Verkovich Vasil, DataLexer.com, 2023
+# Commuinication with ESP8266 WIFI module with Serial AT commands
+#
+
+set mmg_write_crc 0
+set trace_all 0
+set trace_read 0
+#set trace_write 1
+set mmg_send_every_sec 0
+
+set v_AT [41 54 0D 0A]
+set v_ATE [41 54 45 0D 0A]
+set v_AT_GMR [41 54 2B 47 4D 52 0D 0A]
+
+set v_AT_UART_CUR [41 54 2B 55 41 52 54 5F 43 55 52  0D 0A]
+set v_AT_CWMODE [41 54 2B 43 57 4D 4F 44 45 3F   0D 0A]
+set v_AT_CWMODE_CUR [41 54 2B 43 57 4D 4F 44 45  5F 43 55 52  3F 0D 0A]
+set v_AT_CWMODE_CUR_EQ_1 [41 54 2B 43 57 4D 4F 44 45  5F 43 55 52 3D 31  0D 0A]
+
+set v_AT_CWINIT [41 54 2B 43 57 49 4E 49 54          3F 0D 0A]
+set v_AT_CWINIT_EQ_1 [41 54 2B 43 57 49 4E 49 54   3D   31      0D 0A]
+
+set v_AT_CWSTATE [41 54 2B 43 57 53 54 41 54 45          3F 0D 0A]
+
+
+
+#AT+CWBANDWIDTH?
+set v_AT_CWBANDWIDTH [41 54 2B 43 57 42 41 4E 44 57 49 44 54 48        3F 0D 0A]
+
+#set v_AT_CWLAP [41 54 2B 43 57 4C 41 50 3F 0D 0A]
+set v_AT_CWLAP [41 54 2B 43 57 4C 41 50 0D 0A]
+set v_AT_CIPSTAMAC [41 54 2B 43 49 50 53 54 41 4D 41 43 3F 0D 0A]
+set v_AT_CIPSTAMAC_CUR [41 54 2B 43 49 50 53 54 41 4D 41 43 5F 43 55 52 3F 0D 0A]
+set v_AT_CIPSTAMAC_CUR [41 54 2B 43 49 50 53 54 41 4D 41 43 5F 43 55 52 3D 22 41  3A  42 3A 43 3A 44 3A 45 3A 46 22  0D 0A]
+set v_AT_CIPSTAMAC_CUR_EQ_X [41 54 2B 43 49 50 53 54 41 4D 41 43 5F 43 55 52 3D 22 41  3A  42 3A 43 3A 44 3A 45 3A 46 22  0D 0A]
+
+set v_AT_CIPSTAMAC_CUR_EQ_X2 [41 54 2B 43 49 50 53 54 41 4D 41 43 5F 43 55 52 3D 22 22 0D 0A]
+
+#"18:fe:35:98:d3:7b
+
+set v_AT_CWSTARTSMART [41 54 2B 43 57 53 54 41 52 54 53 4D 41 52 54 0D 0A]
+
+set v_AT_CIOBAUD [41 54 2B 43 49 4F 42 41 55 44 3F 0D 0A]
+
+set v_AT_RST [41 54 2B 52 53 54 0A]
+set v_AT_RESTORE [41 54 2B 52 45 53 54 4F 52 45 0A]
+set x 0
+
+serport_open p, "rw", "COM8"
+
+IF X NE 1
+write p, 1000, v_AT
+read p, 2000, 20, vo
+vecgs vsz, vo
+if vsz lt 1
+  print("No reply")
+  quit
+endif
+vec2str s, vo
+print("Got: v_AT [", v_AT, "] -> s: ", s)
+
+set v v_AT_CWSTATE
+vec2str s2, v
+write p, 1000, v
+read p, 2000, 500, vo
+vec2str so, vo
+print("v: ",  s2, ", vo: ", so)
+
+IF x NE 0
+set v v_AT_GMR
+vec2str s20, v
+write p, 1000, v
+read p, 2000, 500, vo20
+vec2str so20, vo20
+print("v: ",  s20, ", vo20: ", so20)
+endif
+
+set v v_AT_CWINIT_EQ_1
+set v v_AT_CWMODE
+vec2str s22, v
+write p, 1000, v
+read p, 2000, 500, vo22
+vec2str so22, vo22
+print("v: ",  s22, ", vo22: ", so22)
+
+ENDIF
+
+#set v v_AT_CWLAP 
+#set v v_AT_CIPSTAMAC_CUR
+set v v_AT_CIPSTAMAC
+#set v  v_AT_CIPSTAMAC_CUR_EQ_X
+set v v_AT_CWBANDWIDTH
+vec2str s3, v
+set vo3 []
+write p, 1000, v
+read p, 2000, 500, vo3
+vec2str so3, vo3
+print("v: ",  s3, ", vo3: ", so3)
+QUIT
+
+
+
+if x ne 0
+write p, 1000, v_AT_RST
+read p, 2000, 30, vo
+vec2str s, vo
+print("AT+RST: ",  s)
+endif
+
+close p
+
+
+
+
